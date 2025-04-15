@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Liquor Store - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,200;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+ <script>
+    function checkAge() {
+      const birthdate = document.getElementById('birthdate').value;
+      if (!birthdate) return alert("Please enter your birthdate.");
+      const today = new Date();
+      const dob = new Date(birthdate);
+      let age = today.getFullYear() - dob.getFullYear();
+      const m = today.getMonth() - dob.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+        age--;
+      }
+      if (age >= 21) {
+        document.getElementById('age-verification').style.display = 'none';
+      } else {
+        document.getElementById('age-verification').innerHTML = '<h2 style="color:white; text-align:center;">Sorry, you must be 21 or older to enter.</h2>';
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+  	<div class="wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 d-flex align-items-center">
+						<p class="mb-0 phone pl-md-2">
+							<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +54 91122809046</a> 
+							<a href="#"><span class="fa fa-paper-plane mr-1"></span> info@portlander.com.ar</a>
+						</p>
+					</div>
+					<div class="col-md-6 d-flex justify-content-md-end">
+						<div class="social-media mr-4">
+			    		<p class="mb-0 d-flex">
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+			    		</p>
+		        </div>
+		        <div class="reg">
+		        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Portlander <span>Fermentation Lab</span></a>
+	      <div class="order-lg-last btn-group">
+          <a href="#" class="btn-cart dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+				    <div class="dropdown-item d-flex align-items-start" href="#">
+				    	<div class="img" style="background-image: url(images/prod-1.jpg);"></div>
+				    	<div class="text pl-3">
+				    		<h4>Bacardi 151</h4>
+				    		<p class="mb-0"><a href="#" class="price">$25.99</a><span class="quantity ml-3">Quantity: 01</span></p>
+				    	</div>
+				    </div>
+				    <div class="dropdown-item d-flex align-items-start" href="#">
+				    	<div class="img" style="background-image: url(images/prod-2.jpg);"></div>
+				    	<div class="text pl-3">
+				    		<h4>Jim Beam Kentucky Straight</h4>
+				    		<p class="mb-0"><a href="#" class="price">$30.89</a><span class="quantity ml-3">Quantity: 02</span></p>
+				    	</div>
+				    </div>
+				    <div class="dropdown-item d-flex align-items-start" href="#">
+				    	<div class="img" style="background-image: url(images/prod-3.jpg);"></div>
+				    	<div class="text pl-3">
+				    		<h4>Citadelle</h4>
+				    		<p class="mb-0"><a href="#" class="price">$22.50</a><span class="quantity ml-3">Quantity: 01</span></p>
+				    	</div>
+				    </div>
+				    <a class="dropdown-item text-center btn-link d-block w-100" href="cart.html">
+				    	View All
+				    	<span class="ion-ios-arrow-round-forward"></span>
+				    </a>
+				  </div>
+        </div>
+
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              	<a class="dropdown-item" href="product.html">Products</a>
+                <a class="dropdown-item" href="product-single.html">Single Product</a>
+                <a class="dropdown-item" href="cart.html">Cart</a>
+                <a class="dropdown-item" href="checkout.html">Checkout</a>
+              </div>
+            </li>
+	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <div class="hero-wrap" style="background-image: url(https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/480962089_1379445393117164_4767787179188743212_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=y6-uw90jj2EQ7kNvwEjWAys&_nc_oc=Adm38GXxbJ4YDHZ-v5dGwrG1U9o_UPcOHFP4-gvX3hWS2AbxaQg2rrHDMl7J7uKYvUF_OoWE3DzOZWRcydz0xAGv&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=0Vzz61kbYSMbU-LDrBwq0g&oh=00_AfEZORiy91JoVgY8DMJHy-cvfYxgOFXHROZuJgyAvRVa4w&oe=68037B97);" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-8 ftco-animate d-flex align-items-end">
+          	<div class="text w-100 text-center">
+	            <h1 class="mb-4"> <span>From Buenos Aires to Your Glass</span>.</h1>
+	            <p><a href="#" class="btn btn-primary py-2 px-4">Read more</a> <a href="#" class="btn btn-white btn-outline-white py-2 px-4">Contact Us</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section ftco-no-pb">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 img img-3 d-flex justify-content-center align-items-center" style="background-image: url(https://scontent-iad3-1.xx.fbcdn.net/v/t51.75761-15/467607967_18374657800129147_3107362006940170885_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=MFoyKg8ftjEQ7kNvwEO7Eb5&_nc_oc=Adl2Xknmtvvm5nDvkiJ9VsSsxMwUdQMNsXARP-82qHv0bphWf_mke44aTspbuYCCtHs&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=_oGMC3Et8vCKu79IQvi5zA&oh=00_AfHgD5fFnSNVyGOGh5nbuw5s8Km1Jk4ToqgIO3ZiKBiF6Q&oe=68033A03);">
+					</div>
+					<div class="col-md-6 wrap-about pl-md-5 ftco-animate py-5">
+	          <div class="heading-section">
+	          	<span class="subheading">Since 2015</span>
+	            <h2 class="mb-4">Desire Meets A New Taste</h2>
+
+	            <p>Portlander Fermentation Lab was born in the heart of Buenos Aires, where science and craft collide in every bottle. What started as a group of friends experimenting with homebrews quickly turned into a full-blown fermentation lab dedicated to pushing boundaries.</p>
+	            <p>From bold IPAs to wild fermented creations, we honor Argentina’s creative spirit by crafting drinks that are as vibrant and complex as the culture around us. Every brew is local, intentional, and proudly made with soul.</p>
+	            <p class="year">
+	            	<strong class="number" data-number="10">0</strong>
+		            <span>Years of Experience In Business</span>
+	            </p>
+	          </div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section ftco-no-pb">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 col-md-4 ">
+						<div class="sort w-100 text-center ftco-animate">
+							<div class="img" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQibJKydme8aW73vmkHx8q10Ro8CUjtXLkxhg&s);"></div>
+							<h3>Klooster</h3>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 ">
+						<div class="sort w-100 text-center ftco-animate">
+							<div class="img" style="background-image: url(https://www.portlander.com.ar/images/DISTRIBUIDORA-MAYORISTA--18-.png);"></div>
+							<h3>Sauvie Island Pilsen</h3>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 ">
+						<div class="sort w-100 text-center ftco-animate">
+							<div class="img" style="background-image: url(https://www.portlander.com.ar/images/DISTRIBUIDORA-MAYORISTA--19-.png);"></div>
+							<h3>Saturday Market Honey</h3>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 ">
+						<div class="sort w-100 text-center ftco-animate">
+							<div class="img" style="background-image: url(https://www.portlander.com.ar/images/DISTRIBUIDORA-MAYORISTA--20-.png);"></div>
+							<h3>Forest Park IPA</h3>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 ">
+						<div class="sort w-100 text-center ftco-animate">
+							<div class="img" style="background-image: url(https://http2.mlstatic.com/D_NQ_NP_971168-MLA53546373338_012023-O.webp);"></div>
+							<h3>+58</h3>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 ">
+						<div class="sort w-100 text-center ftco-animate">
+							<div class="img" style="background-image: url(https://d28hi93gr697ol.cloudfront.net/005d3459-c1ea-24a8-aeae-3580991ebeff/img/Producto/0c7de4d0-4b05-16f4-d7ee-039152fafc9a/WhatsApp-Image-2025-01-15-at-9-44-30-AM-6787b2da69648.jpg);"></div>
+							<h3>La Kolita</h3>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row justify-content-center pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+          	<span class="subheading">Our Delightful offerings</span>
+            <h2>Tastefully Yours</h2>
+          </div>
+        </div>
+				<div class="row">
+					<div class="col-md-3 d-flex">
+						<div class="product ftco-animate">
+							<div class="img d-flex align-items-center justify-content-center" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHr8Gn6rblilgmKKydFRdX_S2rHztDROWuRA&s);">
+								<div class="desc">
+									<p class="meta-prod d-flex">
+								</div>
+							</div>
+							<div class="text text-center">
+								<span class="seller">Best Seller</span>
+								<span class="category">Barrel Aged Beer</span>
+								<h2>Klooster</h2>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 d-flex">
+						<div class="product ftco-animate">
+							<div class="img d-flex align-items-center justify-content-center" style="background-image: url(https://scontent-iad3-2.xx.fbcdn.net/v/t51.75761-15/469812704_18377751385129147_2475018283348308580_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=iObyxwvclKEQ7kNvwGiZlK-&_nc_oc=Adl7U88VyWQf86aj4od4eZxe5QxvgJk74ddR0jRnyTlu2vEFI7fBGmmoFMRX6B2Fj5Kik5uVd22ypwLei5i5ptUP&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&_nc_gid=mGxEd63CNF7fK4hEiJSDYg&oh=00_AfE7Kux6aoPumx7n5qWM65uf92x0k2VCcvukc1HoXNz3oQ&oe=6803662C);">
+								<div class="desc">
+									<p class="meta-prod d-flex">
+									</p>
+								</div>
+							</div>
+							<div class="text text-center">
+								<span class="category">Craft Beer</span>
+								<h2>Irish Red Ale</h2>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 d-flex">
+						<div class="product ftco-animate">
+							<div class="img d-flex align-items-center justify-content-center" style="background-image: url(https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/468860745_18376226905129147_9049334810102249802_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=mISdEZCoAGgQ7kNvwFLbYaH&_nc_oc=AdlG9gukkFJl1Wd6I-z-zQmya0v9mmS7gduvBlQzV687zQwpZqA2oLt6fh4l10MRUVPylG_WZaPofE48nA30QfdW&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=iGXSrL5TRvrfWEjUOLaGSg&oh=00_AfHhvFIZ2EpJwvLhc6I2AUw0eoTRgmb1XDEttgtq7fLPyQ&oe=68038F5A);">
+								<div class="desc">
+									<p class="meta-prod d-flex">
+									</p>
+								</div>
+							</div>
+							<div class="text text-center">
+								<span class="new">Award Winning</span>
+								<span class="category">Imperial Red IPA</span>
+								<h2>Forest Park </h2>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 d-flex">
+						<div class="product ftco-animate">
+							<div class="img d-flex align-items-center justify-content-center" style="background-image: url(https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/485383867_3957401601190911_5437267370158326581_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=mpBPGIipQgkQ7kNvwEdYcVj&_nc_oc=AdkE9VG0VtyMyeVXwVCmsukeChUgEs1tdft9JSDjRotqYmvliV-HaWd_gzP8AH-iVHld12UYRXVZYJ33yCaGWaqG&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=XLZUrauVClmoPbNW8O5uDA&oh=00_AfHsPemfMcC2LZPxaN2R6W9MyFsAG86nIxdpI67DEwZ9Uw&oe=68035FBB);">
+								<div class="desc">
+									<p class="meta-prod d-flex">
+									</p>
+								</div>
+							</div>
+							<div class="text text-center">
+								<span class="category">Craft Beer</span>
+								<h2>American IPA</h2>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3 d-flex">
+						<div class="product ftco-animate">
+							<div class="img d-flex align-items-center justify-content-center" style="background-image: url(https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/468841679_18376235446129147_6200387364605617231_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=wS8S2l-b_kEQ7kNvwEwQnIZ&_nc_oc=AdlmcPIN73ODAC3ulvE1BmX9WfzWe1cpG9b62_k2NA4BMT5o3d6TnGaC7gWpvWydzFcm096Je7d7rW4ZEwxT_j9G&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=sfd_cz_GvC8tInDzT0vEhg&oh=00_AfEL7qONT5fTDWuBf77fEPSZl5r1ynGivhnL_eYBZeMcLA&oe=68038FBA);">
+								<div class="desc">
+									<p class="meta-prod d-flex">
+									</p>
+								</div>
+							</div>
+							<div class="text text-center">
+								<span class="category">Non-Alcoholic Beer</span>
+								<h2>IPA</h2>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 d-flex">
+						<div class="product ftco-animate">
+							<div class="img d-flex align-items-center justify-content-center" style="background-image: url(https://scontent-iad3-1.xx.fbcdn.net/v/t51.75761-15/465836941_18372938032129147_2702844013511959336_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=aWKjsn5ESrMQ7kNvwHKqEiD&_nc_oc=AdkoQ95MV2QXfOCS0byKOjnskztR_jXkzEn9PMKDkwSc_gFm6WM8yft2weAhlnFWu5NjBFSaJobynwdFI-3Y_Exy&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=3Oj_3E7NrLBcCQPtbXM-rQ&oh=00_AfEWG6dqpgWYqh2nk4dcUQSBh7OcXho7OX2RMVKcc5RB4A&oe=680370B7);">
+								<div class="desc">
+									<p class="meta-prod d-flex">
+									</p>
+								</div>
+							</div>
+							<div class="text text-center">
+								<span class="category">Craft Beer</span>
+								<h2>Sauvie Island Pilsen</h2>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 d-flex">
+						<div class="product ftco-animate">
+							<div class="img d-flex align-items-center justify-content-center" style="background-image: url(https://d28hi93gr697ol.cloudfront.net/005d3459-c1ea-24a8-aeae-3580991ebeff/img/Producto/587fedb2-3b5c-6de8-b2b5-f2a7f9e2a8ae/AF-MALTA-58-LATA-ball-mockup-v2-6666f7fedc877.jpg);">
+								<div class="desc">
+									<p class="meta-prod d-flex">
+									</p>
+								</div>
+							</div>
+							<div class="text text-center">
+								<span class="category">Non-Alcoholic Malt</span>
+								<h2>+58</h2>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 d-flex">
+						<div class="product ftco-animate">
+							<div class="img d-flex align-items-center justify-content-center" style="background-image: url(https://acdn-us.mitiendanube.com/stores/003/681/935/products/whatsapp-image-2025-01-15-at-10-49-04-am-a64e3d4af86f09ff8d17375543117258-480-0.jpeg);">
+								<div class="desc">
+									<p class="meta-prod d-flex">
+									</p>
+								</div>
+							</div>
+							<div class="text text-center">
+								<span class="category">Non-Alcoholic Soda</span>
+								<h2>La Kolita</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-md-4">
+						<a href="product.html" class="btn btn-primary d-block">View All Products <span class="fa fa-long-arrow-right"></span></a>
+					</div>
+				</div>
+			</div>
+		</section>
+  
+    <section class="ftco-section testimony-section img" style="background-image: url(https://beerpal-vapor-bucket.s3.amazonaws.com/site/no_place.jpg);">
+    	<div class="overlay"></div>
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+          	<span class="subheading">Testimonial</span>
+            <h2 class="mb-3">Happy Clients</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+		
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+          	<span class="subheading">Blog</span>
+            <h2>Recent Blog</h2>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-lg-6 d-flex align-items-stretch ftco-animate">
+          	<div class="blog-entry d-flex">
+          		<a href="blog-single.html" class="block-20 img" style="background-image: url('images/image_1.jpg');">
+              </a>
+              <div class="text p-4 bg-light">
+              	<div class="meta">
+              		<p><span class="fa fa-calendar"></span> 23 April 2020</p>
+              	</div>
+                <h3 class="heading mb-3"><a href="#">The Recipe from a Winemaker’s Restaurent</a></h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <a href="#" class="btn-custom">Continue <span class="fa fa-long-arrow-right"></span></a>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex align-items-stretch ftco-animate">
+          	<div class="blog-entry d-flex">
+          		<a href="blog-single.html" class="block-20 img" style="background-image: url('images/image_2.jpg');">
+              </a>
+              <div class="text p-4 bg-light">
+              	<div class="meta">
+              		<p><span class="fa fa-calendar"></span> 23 April 2020</p>
+              	</div>
+                <h3 class="heading mb-3"><a href="#">The Recipe from a Winemaker’s Restaurent</a></h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <a href="#" class="btn-custom">Continue <span class="fa fa-long-arrow-right"></span></a>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex align-items-stretch ftco-animate">
+          	<div class="blog-entry d-flex">
+          		<a href="blog-single.html" class="block-20 img" style="background-image: url('images/image_3.jpg');">
+              </a>
+              <div class="text p-4 bg-light">
+              	<div class="meta">
+              		<p><span class="fa fa-calendar"></span> 23 April 2020</p>
+              	</div>
+                <h3 class="heading mb-3"><a href="#">The Recipe from a Winemaker’s Restaurent</a></h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <a href="#" class="btn-custom">Continue <span class="fa fa-long-arrow-right"></span></a>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex align-items-stretch ftco-animate">
+          	<div class="blog-entry d-flex">
+          		<a href="blog-single.html" class="block-20 img" style="background-image: url('images/image_4.jpg');">
+              </a>
+              <div class="text p-4 bg-light">
+              	<div class="meta">
+              		<p><span class="fa fa-calendar"></span> 23 April 2015</p>
+              	</div>
+                <h3 class="heading mb-3"><a href="#">How Did We Become Portlander?</a></h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <a href="#" class="btn-custom">Continue <span class="fa fa-long-arrow-right"></span></a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>	
+
+    <footer class="ftco-footer">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-sm-12 col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2 logo"><a href="#">Liquor <span>Store</span></a></h2>
+              <p>Far far away, behind the word mountains, far from the countries.</p>
+              <ul class="ftco-footer-social list-unstyled mt-2">
+                <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">My Accounts</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>My Account</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Register</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Log In</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>My Order</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Information</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About us</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Catalog</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact us</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Term &amp; Conditions</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Quick Link</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>New User</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Help Center</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Report Spam</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Faq's</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon fa fa-map marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+	                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+	                <li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span class="text">info@yourdomain.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid px-0 py-5 bg-black">
+      	<div class="container">
+      		<div class="row">
+	          <div class="col-md-12">
+		
+	            <p class="mb-0" style="color: rgba(255,255,255,.5);"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+	  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	          </div>
+	        </div>
+      	</div>
+      </div>
+    </footer>
+	 <script>
+    function checkAge() {
+      const birthdate = document.getElementById('birthdate').value;
+      if (!birthdate) return alert("Please enter your birthdate.");
+      const today = new Date();
+      const dob = new Date(birthdate);
+      let age = today.getFullYear() - dob.getFullYear();
+      const m = today.getMonth() - dob.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+        age--;
+      }
+      if (age >= 21) {
+        document.getElementById('age-verification').style.display = 'none';
+      } else {
+        document.getElementById('age-verification').innerHTML = '<h2 style="color:white; text-align:center;">Sorry, you must be 21 or older to enter.</h2>';
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+	 <script>
+    function checkAge() {
+      const birthdate = document.getElementById('birthdate').value;
+      if (!birthdate) return alert("Please enter your birthdate.");
+      const today = new Date();
+      const dob = new Date(birthdate);
+      let age = today.getFullYear() - dob.getFullYear();
+      const m = today.getMonth() - dob.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+        age--;
+      }
+      if (age >= 21) {
+        document.getElementById('age-verification').style.display = 'none';
+      } else {
+        document.getElementById('age-verification').innerHTML = '<h2 style="color:white; text-align:center;">Sorry, you must be 21 or older to enter.</h2>';
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
